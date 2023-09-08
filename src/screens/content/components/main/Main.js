@@ -27,6 +27,7 @@ export default function Main() {
             </div>
             <div className="postsContainer">
                 {
+                    // eslint-disable-next-line
                     posts && posts.length > 0 && posts.map((post) => {
                         if (post.isPopular === !sectionActive) {
                             return <Post key={post.id} id={post.id} title={post.title} content={post.content} imageURL={post.imageUrl} publicationTime={post.publicationTime} feed={post.feed} subFeed={post.subFeed} author={post.author} liked={'liked' in post && post.liked} saved={'saved' in post && post.saved} />
