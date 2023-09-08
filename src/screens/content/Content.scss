@@ -1,0 +1,176 @@
+@import '../../scssConfig/config';
+@import '../../scssConfig/utilities';
+
+.Content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    .Topbar {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 65px;
+        background-color: $bg-color;
+        width: calc(100% - 255px);
+        z-index: 12;
+
+        .section {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            .left, .right, .boxedSection {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .boxedSection {
+                border-left: 1px solid $bg-secondary-color;
+                padding: 1rem;
+            }
+            
+
+            &:first-child {
+                width: 80%;
+                padding-left: 1rem;
+            }
+
+            &:last-child {
+                width: 20%;
+                padding-right: 1rem;
+            }
+
+            .circular-placeholder {
+                width: 18px;
+                height: 18px;
+                border-radius: 99px;
+                background-color: $text-color;
+
+                &.blue {
+                    background-color: $secondary-color;
+                }
+            }
+
+            .rectangular-placeholder {
+                width: 136px;
+                height: 10px;
+                margin: 0 1rem;
+                background-color: $text-color;
+
+                &.blue {
+                    background-color: $secondary-color;
+                }
+
+                &.accent {
+                    background-color: $accent-color;
+                }
+            }
+        }
+    }
+
+    .Main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 65px;
+        height: 100vh;
+        width: calc(100%);
+
+        .posts {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+
+            .posts-topbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .left {
+                    button {
+                        background-color: transparent;
+                        border: transparent;
+                        font-size: 17.6px;
+                        color: $text-secondary-color;
+                        font-weight: 700;
+                        transition: color 250ms ease;
+
+                        &.active {
+                            color: $accent-color;
+                        }
+
+                        &:hover {
+                            color: $text-color;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+        .sideSection {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+
+            .box {
+                display: flex;
+                flex-direction: column;
+                border: 2px solid $secondary-color;
+
+                .rectangular-placeholder {
+                    margin: 1rem;
+                    background-color: $secondary-color;
+                    height: 10px;
+                    width: 80%;
+
+                    &.small {
+                        width: 40%;
+                    }
+                }
+
+                &.filled {
+                    background-color: $secondary-color;
+                    padding: 1rem;
+
+                    .rectangular-placeholder {
+                        background-color: $bg-color;
+                    }
+                }
+
+                &:first-child {
+                    height: 154px;
+                    margin-bottom: 2rem;
+                }
+
+                &:last-child {
+                    height: 56px;
+                    flex-direction: row;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .rectangular-placeholder {
+                        width: 50%;
+                    }
+
+                    .circular-placeholder {
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 99px;
+                        background-color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@import '../../scssConfig/config';
+@import '../../scssConfig/utilities';
+
+.Sidebar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    z-index: 13;
+
+    .logoContainer {
+        padding-top: 47px;
+        padding-left: 46px;
+
+        img {
+            width: 163px;
+        }
+    }
+
+    .menuItems {
+        .menuItem {
+            height: 41px;
+
+            .box {
+                margin-left: 2rem;
+                background-color: $bg-secondary-color;
+                height: 40%;
+                width: 60%;
+            }
+        }
+    }
+}

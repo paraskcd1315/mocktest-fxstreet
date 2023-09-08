@@ -1,0 +1,13 @@
+$primary-color: #242D38;
+$secondary-color: #304C70;
+$tertiary-color: #7598C4;
+$accent-color: #E4871B;
+$bg-color: #fff;
+$bg-secondary-color: #ECECF1;
+$text-color: #49494F;
+$text-secondary-color: #8C8D91;
+
+@mixin set-size($width, $height) {
+	width: $width;
+	height: $height;
+}

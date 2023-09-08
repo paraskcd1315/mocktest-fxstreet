@@ -1,0 +1,17 @@
+@import '../scssConfig/config';
+@import '../scssConfig/utilities';
+
+.App {
+    background-color: $bg-secondary-color;
+
+    .dashboard {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .Sidebar {
+        width: 255px;
+        background-color: $primary-color;
+        height: 100vh;
+    }
+}
