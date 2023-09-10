@@ -15,7 +15,7 @@ export default function App() {
   return <div className="App">
     <div className="dashboard">
       <Sidebar />
-      <div className="spacer" style={{ width: "295px" }}></div>
+      <div className="spacer"></div>
       <Content />
     </div>
   </div>

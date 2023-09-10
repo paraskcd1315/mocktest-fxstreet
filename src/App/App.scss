@@ -14,4 +14,24 @@
         background-color: $primary-color;
         height: 100vh;
     }
+
+    .spacer {
+        width: 295px;
+    }
+}
+
+@media screen and (max-width: 80rem) {
+    .App {
+        .spacer {
+            width: 320px;
+        }
+    }
+}
+
+@media screen and (max-width: 70rem) {
+    .App {
+        .spacer {
+            width: 0px;
+        }
+    }
 }

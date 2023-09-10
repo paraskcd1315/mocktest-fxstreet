@@ -17,6 +17,10 @@
         width: calc(100% - 255px);
         z-index: 12;
 
+        .hamburgerMenu {
+            display: none;
+        }
+
         .section {
             display: flex;
             flex-direction: row;
@@ -111,6 +115,10 @@
                             color: $text-color;
                             cursor: pointer;
                         }
+
+                        &:active {
+                            color: $accent-color;
+                        }
                     }
                 }
             }
@@ -170,6 +178,87 @@
                         background-color: $secondary-color;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 70rem) {
+    .Content {
+        .Topbar {
+            width: 100%;
+
+            .hamburgerMenu {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-right: 1rem;
+                @include set-size(65px, 65px);
+                border: none;
+                background-color: $primary-color;
+                justify-content: center;
+                position: relative;
+
+                svg {
+                    position: absolute;
+                    fill: $bg-color;
+                    opacity: 0;
+                    transition: opacity 250ms ease;
+                }
+
+                span {
+                    width: 30px;
+                    height: 3px;
+                    margin-bottom: 0.2rem;
+                    background-color: $bg-color;
+                    transition: opacity 250ms ease;
+                }
+
+                &.active { 
+                    span {
+                        opacity: 0;
+                    }
+                    svg {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .section {
+                &:first-child {
+                    width: 70%;
+                    padding-left: 0px;
+                }
+    
+                &:last-child {
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 50rem) {
+    .Content {
+        .Topbar {
+            .section {
+                &:first-child {
+                    width: 60%;
+                    padding-left: 0px;
+                }
+    
+                &:last-child {
+                    width: 40%;
+                }
+            }
+        }
+
+        .Main {
+            .posts {
+                width: 100%;
+            }
+            .sideSection {
+                display: none;
             }
         }
     }

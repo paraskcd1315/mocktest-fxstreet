@@ -1,8 +1,11 @@
 import './Sidebar.scss';
 import logo from '../../assets/images/CompanyLogo.png'
+import { useSelector } from 'react-redux';
 
 export default function Sidebar() {
-    return <div className="Sidebar">
+    const sidebarOpened = useSelector(state => state.elementsReducer.sidebarOpened);
+
+    return <div className={`Sidebar${sidebarOpened ? " active" : ""}`}>
         <div className="logoContainer">
             <img src={logo} alt="Company Logo" />
         </div>
